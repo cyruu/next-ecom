@@ -40,18 +40,18 @@ const ProductDescription = ({ product, loading, productReviews = [] }: any) => {
     }
   }
 
-  useEffect(() => {
-    if (productReviews && Array.isArray(productReviews)) {
-      const countObject = productReviews.reduce(
-        (counts: any, review: any) => {
-          counts[review.sentiment] = counts[review.sentiment] + 1;
-          return counts;
-        },
-        { positive: 0, negative: 0, neutral: 0 }
-      );
-      setSentimentCount(countObject);
-    }
-  }, [productReviews]);
+  // useEffect(() => {
+  //   if (productReviews && Array.isArray(productReviews)) {
+  //     const countObject = productReviews.reduce(
+  //       (counts: any, review: any) => {
+  //         counts[review.sentiment] = counts[review.sentiment] + 1;
+  //         return counts;
+  //       },
+  //       { positive: 0, negative: 0, neutral: 0 }
+  //     );
+  //     setSentimentCount(countObject);
+  //   }
+  // }, [productReviews]);
 
   function handleMouseEnter() {
     setVisible(true);
@@ -109,7 +109,7 @@ const ProductDescription = ({ product, loading, productReviews = [] }: any) => {
               <p className="text-lg my-2 fontlight poppins">
                 Rs. {product.price}
               </p>
-              <div className="relative flex items-center">
+              {/* <div className="relative flex items-center">
                 <div
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
@@ -190,7 +190,7 @@ const ProductDescription = ({ product, loading, productReviews = [] }: any) => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="buttons w-full ">
               {!loggedInUser ? (

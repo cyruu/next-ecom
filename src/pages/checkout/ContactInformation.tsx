@@ -3,27 +3,19 @@ import ContactInfoSkeleton from "@/components/ContactInfoSkeleton";
 import { Button, Checkbox, FormControlLabel, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
-const ContactInformation = ({
-  profileDataObject,
-  register,
-  errors,
-  reset,
-  setValue,
-  loading,
-  paymentmethod,
-  setpaymentmethod,
-}: any) => {
+const ContactInformation = (props: any) => {
+  const {
+    profileDataObject,
+    register,
+    errors,
+    reset,
+    setValue,
+    loading,
+    paymentmethod,
+    setpaymentmethod,
+  } = props;
   const [useProfileData, setuseProfileData] = useState(false);
-  const [contactDataObject, setcontactDataObject] = useState({
-    uid: profileDataObject.uid,
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    address: "",
-    city: "",
-    country: "Nepal",
-  });
+
   function fillProfileData() {
     // setcontactDataObject(profileDataObject);
     setValue("firstName", profileDataObject.firstName);
@@ -34,12 +26,12 @@ const ContactInformation = ({
     setValue("city", profileDataObject.city);
   }
   useEffect(() => {
-    if (useProfileData) {
+    if (useProfileData && profileDataObject) {
       fillProfileData();
     } else {
       reset();
     }
-  }, [useProfileData]);
+  }, [useProfileData, profileDataObject]);
   return (
     <div className="w-[100%] h-max bg-white pb-7 mb-20 shadow-md px-10 rounded-2xl">
       {loading ? (

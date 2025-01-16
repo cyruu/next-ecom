@@ -17,7 +17,7 @@ const SingleProductReview = (reviewEach: any) => {
         </Avatar>
         <p className="mr-2 text-sm font-bold poppins">{revieweach.userName}</p>
         <p className="text-xs text-gray-500 poppins">at {dateOnly}</p>
-        <span
+        {/* <span
           className={`h-[10px] w-[10px] rounded-full poppins ${
             revieweach.sentiment === "positive"
               ? "bg-green-400"
@@ -27,7 +27,7 @@ const SingleProductReview = (reviewEach: any) => {
               ? "bg-gray-400"
               : "bg-gray-200" // fallback color if sentiment is not matched
           } ml-2`}
-        ></span>
+        ></span> */}
       </div>
       <div className="review-content ml-10 text-sm text-gray-500 poppins">
         {revieweach.review}

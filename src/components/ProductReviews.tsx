@@ -37,11 +37,12 @@ const ProductReviews = ({
 
   // Function to handle posting review
   async function handlePostReview(review: string) {
-    const { data: resData } = await axios.post(
-      "http://localhost:8001/calcsentiment",
-      { sentence: review }
-    );
-    const sentimentResult = resData.sentiment;
+    // const { data: resData } = await axios.post(
+    //   "http://localhost:8001/calcsentiment",
+    //   { sentence: review }
+    // );
+    // const sentimentResult = resData.sentiment;
+    const sentimentResult = "positive";
 
     // API to add review
     const { data: reviewData } = await axios.post(
@@ -112,7 +113,7 @@ const ProductReviews = ({
             </p>
           </div>
           <p className="text-md text-center my-7 text-gray-500">
-            {sentiment === "positive" ? (
+            {/* {sentiment === "positive" ? (
               <span>
                 Thank you for your positive review! Hope to see you shop with us
                 again.
@@ -132,7 +133,11 @@ const ProductReviews = ({
                 Thank you for your feedback! We&apos;re always working to make
                 products better.
               </span>
-            )}
+            )} */}
+            <span>
+              Thank you for your feedback! We&apos;re always working to make
+              products better.
+            </span>
           </p>
           <div className="button text-center">
             <Button
