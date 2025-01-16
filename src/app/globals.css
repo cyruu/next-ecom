@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.cdnfonts.com/css/valorant");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Dancing+Script:wght@400..700&family=Pacifico&family=Yatra+One&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.valofont {
+  font-family: "VALORANT", sans-serif;
+}
+.dancingscript {
+  font-family: "Dancing Script", cursive;
+}
+.yatrafont {
+  font-family: "Yatra One", system-ui;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+/* global.css */
+.text-border {
+  /* color: ; Text color */
+  -webkit-text-stroke: 0.04px gray; /* Text border */
+  font-weight: bold; /* Optional: to make it stand out */
+}
+
+html {
+  scroll-padding-top: 12vh;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: rgb(247, 250, 255);
+  overflow-x: hidden;
+}
+/* Apply this in your global or component-specific CSS */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.rotatearrow {
+  transform: rotate(180deg);
+}
+.order-cart-items.show {
+  max-height: 1000px;
+  opacity: 1;
+}
+.order-cart-items {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out 0.02s;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* admin Sidebar */
+.adminSideButtons {
+  display: flex;
+  /* background-color: red; */
+  margin: 5px 30px;
+  padding: 5px 0 5px 15px;
+  align-items: center;
+  justify-content: start;
+  border-radius: 5px;
+}
+.adminSideButtons:hover {
+  background-color: rgba(128, 128, 128, 0.259);
+}
+.adminSideButtons p {
+  margin-left: 8px;
+
+  /* background-color: blue; */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-search {
+    display: none;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

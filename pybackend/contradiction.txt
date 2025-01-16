@@ -1,0 +1,77 @@
+{
+
+    "aren't": "are not",
+    "can't": "cannot",
+    "couldn't": "could not",
+    "didn't": "did not",
+    "doesn't": "does not",
+    "don't": "do not",
+    "dont": "do not",
+    "hadn't": "had not",
+    "hasn't": "has not",
+    "haven't": "have not",
+    "isn't": "is not",
+    "mustn't": "must not",
+    "shan't": "shall not",
+    "shouldn't": "should not",
+    "wasn't": "was not",
+    "weren't": "were not",
+    "won't": "will not",
+    "wouldn't": "would not",
+
+    "I'm": "I am",
+    "I've": "I have",
+    "I'll": "I will",
+    "I'd": "I would",
+
+
+    "you're": "you are",
+    "you've": "you have",
+    "you'll": "you will",
+    "you'd": "you would",
+
+
+    "he's": "he is",
+    "he'll": "he will",
+    "he'd": "he would",
+
+
+    "she's": "she is",
+    "she'll": "she will",
+    "she'd": "she would",
+
+
+    "it's": "it is",
+    "it'll": "it will",
+    "it'd": "it would",
+
+
+    "we're": "we are",
+    "we've": "we have",
+    "we'll": "we will",
+    "we'd": "we would",
+
+
+    "they're": "they are",
+    "they've": "they have",
+    "they'll": "they will",
+    "they'd": "they would",
+
+
+    "there's": "there is",
+    "there'll": "there will",
+    "there'd": "there would",
+    "here's": "here is",
+    "that'll": "that will",
+    "that'd": "that would",
+    "who's": "who is",
+    "who'll": "who will",
+    "who'd": "who would",
+    "what's": "what is",
+    "what'll": "what will",
+    "what'd": "what would",
+    "let's": "let us",
+    "how's": "how is",
+    "how'll": "how will",
+    "how'd": "how would"
+}

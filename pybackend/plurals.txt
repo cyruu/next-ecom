@@ -1,0 +1,320 @@
+{
+    "addenda": {
+        "NOUN": "addendum"
+    },
+    "algae": {
+        "NOUN": "alga"
+    },
+    "alumnae": {
+        "NOUN": "alumna"
+    },
+    "alumni": {
+        "NOUN": "alumnus"
+    },
+    "analyses": {
+        "NOUN": "analysis"
+    },
+    "antennae": {
+        "NOUN": "antenna"
+    },
+    "apparatuses": {
+        "NOUN": "apparatus"
+    },
+    "appendixes": {
+        "NOUN": "appendix"
+    },
+    "axes": {
+        "NOUN": "axis"
+    },
+    "bacilli": {
+        "NOUN": "bacillus"
+    },
+    "bacteria": {
+        "NOUN": "bacterium"
+    },
+    "bases": {
+        "NOUN": "basis"
+    },
+    "beaux": {
+        "NOUN": "beau"
+    },
+    "bison": {
+        "NOUN": "bison"
+    },
+    "buffaloes": {
+        "NOUN": "buffalo"
+    },
+    "bureaus": {
+        "NOUN": "bureau"
+    },
+    "buses": {
+        "NOUN": "bus"
+    },
+    "cacti": {
+        "NOUN": "cactus"
+    },
+    "calves": {
+        "NOUN": "calf"
+    },
+    "children": {
+        "NOUN": "child"
+    },
+    "corps": {
+        "NOUN": "corps"
+    },
+    "corpuses": {
+        "NOUN": "corpus"
+    },
+    "crises": {
+        "NOUN": "crisis"
+    },
+    "criteria": {
+        "NOUN": "criterion"
+    },
+    "curricula": {
+        "NOUN": "curriculum"
+    },
+    "data": {
+        "NOUN": "datum"
+    },
+    "deer": {
+        "NOUN": "deer"
+    },
+    "dice": {
+        "NOUN": "die"
+    },
+    "dwarves": {
+        "NOUN": "dwarf"
+    },
+    "diagnoses": {
+        "NOUN": "diagnosis"
+    },
+    "echoes": {
+        "NOUN": "echo"
+    },
+    "elves": {
+        "NOUN": "elf"
+    },
+    "ellipses": {
+        "NOUN": "ellipsis"
+    },
+    "embargoes": {
+        "NOUN": "embargo"
+    },
+    "emphases": {
+        "NOUN": "emphasis"
+    },
+    "errata": {
+        "NOUN": "erratum"
+    },
+    "firemen": {
+        "NOUN": "fireman"
+    },
+    "fishes": {
+        "NOUN": "fish"
+    },
+    "focuses": {
+        "NOUN": "focus"
+    },
+    "feet": {
+        "NOUN": "foot"
+    },
+    "formulas": {
+        "NOUN": "formula"
+    },
+    "funguses": {
+        "NOUN": "fungus"
+    },
+    "genera": {
+        "NOUN": "genus"
+    },
+    "geese": {
+        "NOUN": "goose"
+    },
+    "halves": {
+        "NOUN": "half"
+    },
+    "heroes": {
+        "NOUN": "hero"
+    },
+    "hippopotamuses": {
+        "NOUN": "hippopotamus"
+    },
+    "hooves": {
+        "NOUN": "hoof"
+    },
+    "hypotheses": {
+        "NOUN": "hypothesis"
+    },
+    "indexes": {
+        "NOUN": "index"
+    },
+    "knives": {
+        "NOUN": "knife"
+    },
+    "leaves": {
+        "NOUN": "leaf"
+    },
+    "lives": {
+        "NOUN": "life"
+    },
+    "loaves": {
+        "NOUN": "loaf"
+    },
+    "lice": {
+        "NOUN": "louse"
+    },
+    "men": {
+        "NOUN": "man"
+    },
+    "matrices": {
+        "NOUN": "matrix"
+    },
+    "means": {
+        "NOUN": "means"
+    },
+    "media": {
+        "NOUN": "medium"
+    },
+    "memoranda": {
+        "NOUN": "memorandum"
+    },
+    "milennia": {
+        "NOUN": "millennium"
+    },
+    "moose": {
+        "NOUN": "moose"
+    },
+    "mosquitoes": {
+        "NOUN": "mosquito"
+    },
+    "mice": {
+        "NOUN": "mouse"
+    },
+    "nebulas": {
+        "NOUN": "nebula"
+    },
+    "neuroses": {
+        "NOUN": "neurosis"
+    },
+    "nuclei": {
+        "NOUN": "nucleus"
+    },
+    "oases": {
+        "NOUN": "oasis"
+    },
+    "octopuses": {
+        "NOUN": "octopus"
+    },
+    "ova": {
+        "NOUN": "ovum"
+    },
+    "oxen": {
+        "NOUN": "ox"
+    },
+    "paralyses": {
+        "NOUN": "paralysis"
+    },
+    "parentheses": {
+        "NOUN": "parenthesis"
+    },
+    "people": {
+        "NOUN": "person"
+    },
+    "phenomena": {
+        "NOUN": "phenomenon"
+    },
+    "potatoes": {
+        "NOUN": "potato"
+    },
+    "radiuses": {
+        "NOUN": "radius"
+    },
+    "scarves": {
+        "NOUN": "scarf"
+    },
+    "selves": {
+        "NOUN": "self"
+    },
+    "series": {
+        "NOUN": "series"
+    },
+    "sheep": {
+        "NOUN": "sheep"
+    },
+    "shelves": {
+        "NOUN": "shelf"
+    },
+    "scissors": {
+        "NOUN": "scissors"
+    },
+    "species": {
+        "NOUN": "species"
+    },
+    "stimuli": {
+        "NOUN": "stimulus"
+    },
+    "strata": {
+        "NOUN": "stratum"
+    },
+    "syllabuses": {
+        "NOUN": "syllabus"
+    },
+    "symposiums": {
+        "NOUN": "symposium"
+    },
+    "syntheses": {
+        "NOUN": "synthesis"
+    },
+    "synopses": {
+        "NOUN": "synopsis"
+    },
+    "tableaux": {
+        "NOUN": "tableau"
+    },
+    "those": {
+        "NOUN": "that"
+    },
+    "theses": {
+        "NOUN": "thesis"
+    },
+    "thieves": {
+        "NOUN": "thief"
+    },
+    "these": {
+        "NOUN": "this"
+    },
+    "tomatoes": {
+        "NOUN": "tomato"
+    },
+    "teeth": {
+        "NOUN": "tooth"
+    },
+    "torpedoes": {
+        "NOUN": "torpedo"
+    },
+    "vertebrae": {
+        "NOUN": "vertebra"
+    },
+    "vetoes": {
+        "NOUN": "veto"
+    },
+    "vitae": {
+        "NOUN": "vita"
+    },
+    "watches": {
+        "NOUN": "watch"
+    },
+    "wives": {
+        "NOUN": "wife"
+    },
+    "wolves": {
+        "NOUN": "wolf"
+    },
+    "women": {
+        "NOUN": "woman"
+    },
+    "zeroes": {
+        "NOUN": "zero"
+    }
+}
