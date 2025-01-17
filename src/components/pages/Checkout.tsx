@@ -30,8 +30,8 @@ const Checkout = () => {
     product_service_charge: "0",
     product_delivery_charge: "0",
     product_code: "EPAYTEST",
-    success_url: `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/esewapaymentsuccess`,
-    failure_url: `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/paymentfailed`,
+    success_url: `/esewapaymentsuccess`,
+    failure_url: `/paymentfailed`,
     signed_field_names: "total_amount,transaction_uuid,product_code",
 
     signature: "",
@@ -89,22 +89,19 @@ const Checkout = () => {
     const { firstName, lastName, email, phone, address, city } = data;
 
     // checkoutCartList and finalTotal available here
-    const { data: resData }: any = await axios.post(
-      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/order`,
-      {
-        uid,
-        firstName,
-        lastName,
-        email,
-        phone,
-        address,
-        city,
-        country,
-        finalTotal,
-        paymentmethod,
-        checkoutCartList,
-      }
-    );
+    const { data: resData }: any = await axios.post(`/api/order`, {
+      uid,
+      firstName,
+      lastName,
+      email,
+      phone,
+      address,
+      city,
+      country,
+      finalTotal,
+      paymentmethod,
+      checkoutCartList,
+    });
     // order added to database successfull
     if (resData.statusCode == 200) {
       console.log("order placed: ", resData);
@@ -161,7 +158,7 @@ const Checkout = () => {
     // console.log(userid);
 
     const { data: resData }: any = await axios.post(
-      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/products/getcartitems`,
+      `/api/products/getcartitems`,
       {
         msg: "sending user id",
         userId: userid,

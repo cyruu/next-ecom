@@ -14,9 +14,7 @@ const ProductLIstRow = () => {
   const [loading, setLoading] = useState(true);
   async function getProducts() {
     setLoading(true);
-    const { data } = await axios.get(
-      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/products/getproducts`
-    );
+    const { data } = await axios.get(`/api/products/getproducts`);
     // console.log(data);
 
     setProducts(data.ProductsList);

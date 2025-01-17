@@ -38,18 +38,15 @@ const AdminEditProduct = ({ editProduct }: any) => {
     e.preventDefault();
 
     try {
-      const { data: resData } = await axios.post(
-        `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/admin/editproduct`,
-        {
-          productId: editProduct._id,
-          productName: name,
-          categoryId: category,
-          price,
-          image,
-          stock,
-          description,
-        }
-      );
+      const { data: resData } = await axios.post(`/api/admin/editproduct`, {
+        productId: editProduct._id,
+        productName: name,
+        categoryId: category,
+        price,
+        image,
+        stock,
+        description,
+      });
 
       notify(resData.msg, resData.statusCode);
       if (resData.statusCode == 200) {
@@ -68,9 +65,7 @@ const AdminEditProduct = ({ editProduct }: any) => {
 
   // function to get all catefoires form db
   async function getCategories(editProduct: any) {
-    const { data: resData } = await axios.get(
-      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/products/getcategory`
-    );
+    const { data: resData } = await axios.get(`/api/products/getcategory`);
     // console.log(resData);
 
     setCategoryList(resData.categoryList);

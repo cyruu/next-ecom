@@ -13,9 +13,7 @@ export const getCookieUser = createAsyncThunk(
     //     res("sdf");
     //   }, 1000);
     // });
-    const response = await axios.get(
-      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/users/getuser`
-    );
+    const response = await axios.get(`/api/users/getuser`);
     console.log("thunk resp", response.data);
 
     if (response.data.statusCode == 200) {

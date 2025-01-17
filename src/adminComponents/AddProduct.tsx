@@ -45,17 +45,14 @@ const ProductForm = () => {
       setCategoryCheck(true);
     } else {
       try {
-        const { data: resData } = await axios.post(
-          `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/products/addproduct`,
-          {
-            productName: name,
-            categoryId: category,
-            price,
-            image,
-            stock,
-            description,
-          }
-        );
+        const { data: resData } = await axios.post(`/api/products/addproduct`, {
+          productName: name,
+          categoryId: category,
+          price,
+          image,
+          stock,
+          description,
+        });
         notify(resData.msg, resData.statusCode);
         if (resData.statusCode == 200) {
           setName("");
@@ -74,9 +71,7 @@ const ProductForm = () => {
 
   // function to get all catefoires form db
   async function getCategories() {
-    const { data: resData } = await axios.get(
-      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/products/getcategory`
-    );
+    const { data: resData } = await axios.get(`/api/products/getcategory`);
     console.log(resData);
     setCategoryList(resData.categoryList);
   }

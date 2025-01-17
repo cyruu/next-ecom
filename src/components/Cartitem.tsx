@@ -29,7 +29,7 @@ const Cartitem = ({
   async function handleDelete() {
     console.log(product);
     const { data: resData }: any = await axios.post(
-      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/products/deletefromcart`,
+      `/api/products/deletefromcart`,
       {
         product,
         uid,

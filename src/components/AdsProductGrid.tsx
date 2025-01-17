@@ -8,9 +8,7 @@ const CardListOneRow = () => {
 
   async function getgridProducts() {
     setLoading(true);
-    const { data } = await axios.get(
-      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/products/gridproducts`
-    );
+    const { data } = await axios.get(`/api/products/gridproducts`);
     // console.log(data);
 
     setgridProducts(data.gridProductsList);
