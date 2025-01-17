@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
           // ------------------------------------------
           // // Update the product in Redis
           // // ProductsList => explore page
-          // let cachedProductsList: any = await redis.get(`ProductsList`);
+          // let cachedProductsList: any = await redis.get(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}ProductsList`);
           // cachedProductsList = cachedProductsList
           // ? JSON.parse(cachedProductsList)
           // : [];

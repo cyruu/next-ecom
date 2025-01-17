@@ -89,19 +89,22 @@ const Checkout = () => {
     const { firstName, lastName, email, phone, address, city } = data;
 
     // checkoutCartList and finalTotal available here
-    const { data: resData }: any = await axios.post(`api/order`, {
-      uid,
-      firstName,
-      lastName,
-      email,
-      phone,
-      address,
-      city,
-      country,
-      finalTotal,
-      paymentmethod,
-      checkoutCartList,
-    });
+    const { data: resData }: any = await axios.post(
+      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/order`,
+      {
+        uid,
+        firstName,
+        lastName,
+        email,
+        phone,
+        address,
+        city,
+        country,
+        finalTotal,
+        paymentmethod,
+        checkoutCartList,
+      }
+    );
     // order added to database successfull
     if (resData.statusCode == 200) {
       console.log("order placed: ", resData);

@@ -45,14 +45,17 @@ const ProductReviews = ({
     const sentimentResult = "positive";
 
     // API to add review
-    const { data: reviewData } = await axios.post(`api/products/addreview`, {
-      sentimentResult,
-      loggedInUser,
-      userId: loggedInUser.userId,
-      userName: loggedInUser.username,
-      review,
-      pId,
-    });
+    const { data: reviewData } = await axios.post(
+      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/products/addreview`,
+      {
+        sentimentResult,
+        loggedInUser,
+        userId: loggedInUser.userId,
+        userName: loggedInUser.username,
+        review,
+        pId,
+      }
+    );
     setSentiment(sentimentResult);
     setReviewUpdated((prev: any) => !prev);
     handleOpen();

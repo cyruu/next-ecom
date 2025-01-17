@@ -40,9 +40,12 @@ function ChildModal({ id, setReloadCategories }: any) {
   async function handleDeleteCategory(e: any) {
     console.log("delete function called");
 
-    const { data: resData } = await axios.post(`api/admin/deletecategory`, {
-      _id,
-    });
+    const { data: resData } = await axios.post(
+      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/admin/deletecategory`,
+      {
+        _id,
+      }
+    );
     notify(resData.msg, resData.statusCode);
     if (resData.statusCode === 200) {
       setReloadCategories((prev: any) => !prev); // Trigger category reload after successful edit
@@ -108,10 +111,13 @@ function ChildModal2({ id, categoryName, setReloadCategories }: any) {
 
     console.log("name", editCategoryName);
 
-    const { data: resData } = await axios.post(`api/admin/editcategory`, {
-      editCategoryName,
-      _id,
-    });
+    const { data: resData } = await axios.post(
+      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/admin/editcategory`,
+      {
+        editCategoryName,
+        _id,
+      }
+    );
     notify(resData.msg, resData.statusCode);
     if (resData.statusCode === 200) {
       setReloadCategories((prev: any) => !prev); // Trigger category reload after successful edit
@@ -208,7 +214,9 @@ const page = () => {
   };
   //getcategoriew function
   async function getCategories() {
-    const { data: resData } = await axios.get(`api/products/getcategory`);
+    const { data: resData } = await axios.get(
+      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/products/getcategory`
+    );
     console.log(resData);
     setCategoryList(resData.categoryList);
   }
@@ -216,9 +224,12 @@ const page = () => {
   async function handleAddCategory(data: any, e: any) {
     e.preventDefault();
     const { categoryName } = data;
-    const { data: resData } = await axios.post(`api/products/addcategory`, {
-      categoryName,
-    });
+    const { data: resData } = await axios.post(
+      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/products/addcategory`,
+      {
+        categoryName,
+      }
+    );
     notify(resData.msg, resData.statusCode);
     reset();
     setReloadCategories((prev: any) => !prev); // Trigger category reload after successful edit

@@ -8,7 +8,9 @@ const AdminUsers = () => {
   async function getUsers() {
     console.log("function call");
 
-    const { data: resData } = await axios.get(`api/admin/getusers`);
+    const { data: resData } = await axios.get(
+      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/admin/getusers`
+    );
     console.log(resData);
     setuserList(resData.userList);
   }

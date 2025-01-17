@@ -30,7 +30,9 @@ const AdminReviewList = () => {
   //fucntion get reviews
   async function getAllReviews() {
     setloading(true);
-    const { data: resData } = await axios.get(`api/reviews/getallreviews`);
+    const { data: resData } = await axios.get(
+      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/reviews/getallreviews`
+    );
     console.log(resData.allReviewList);
     setallreviewList(resData.allReviewList);
     setloading(false);
