@@ -63,7 +63,7 @@ const Category = () => {
   async function getCategoryProducts() {
     try {
       // setLoading(true);
-      const { data: resData } = await axios.post("/api/category", { cid });
+      const { data: resData } = await axios.post("api/category", { cid });
       console.log("API Response:", resData.CategoryProducts);
       setCatProducts(resData.CategoryProducts);
       setOriginalCatProducts(resData.CategoryProducts);

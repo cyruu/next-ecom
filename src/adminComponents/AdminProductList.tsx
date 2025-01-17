@@ -42,7 +42,7 @@ const ProductLIstRow = ({ setActiveComponent, seteditProduct }: any) => {
   async function handleDeleteProduct(_id: any) {
     console.log("delete function called");
 
-    const { data: resData } = await axios.post(`/api/admin/deleteproduct`, {
+    const { data: resData } = await axios.post(`api/admin/deleteproduct`, {
       _id,
     });
     notify(resData.msg, resData.statusCode);
@@ -54,7 +54,7 @@ const ProductLIstRow = ({ setActiveComponent, seteditProduct }: any) => {
   }
   async function getProducts() {
     setLoading(true);
-    const { data } = await axios.get(`/api/products/getproducts`);
+    const { data } = await axios.get(`api/products/getproducts`);
     // console.log(data);
 
     setproductsList(data.ProductsList);

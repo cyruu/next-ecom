@@ -29,7 +29,7 @@ const AllCategoryLists = () => {
   const [showCount, setShowCount] = useState(4);
   async function getCategories() {
     setCategoryLoading(true);
-    const { data: resData } = await axios.get(`/api/products/getcategory`);
+    const { data: resData } = await axios.get(`api/products/getcategory`);
     console.log("categories in sidemenu", resData);
     setCategoryList(resData.categoryList);
     setCategoryLoading(false);

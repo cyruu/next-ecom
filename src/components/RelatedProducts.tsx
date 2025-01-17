@@ -14,7 +14,7 @@ const RelatedProducts = ({ productId }: any) => {
   async function getrecommendProductList() {
     setLoading(true);
     const { data: resData } = await axios.post(
-      `/api/products/getcategoryrecommendproducts`,
+      `api/products/getcategoryrecommendproducts`,
       { productId }
     );
 

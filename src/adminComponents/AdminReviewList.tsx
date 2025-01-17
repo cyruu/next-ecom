@@ -30,7 +30,7 @@ const AdminReviewList = () => {
   //fucntion get reviews
   async function getAllReviews() {
     setloading(true);
-    const { data: resData } = await axios.get(`/api/reviews/getallreviews`);
+    const { data: resData } = await axios.get(`api/reviews/getallreviews`);
     console.log(resData.allReviewList);
     setallreviewList(resData.allReviewList);
     setloading(false);
@@ -38,7 +38,7 @@ const AdminReviewList = () => {
   //delete review function
   async function handleReviewDelete(reviewId: any) {
     setdeleteLoading(true);
-    const { data: resData } = await axios.post("/api/reviews/deletereview", {
+    const { data: resData } = await axios.post("api/reviews/deletereview", {
       reviewId,
     });
     setdeleteLoading(false);

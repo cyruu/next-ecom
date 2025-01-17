@@ -14,7 +14,7 @@ const page = ({ params }: any) => {
   const [thisProduct, setthisProduct] = useState({});
   async function getthisProduct() {
     setLoading(true);
-    const { data } = await axios.post(`/api/products/thisproduct`, { pid });
+    const { data } = await axios.post(`api/products/thisproduct`, { pid });
     // console.log(data);
 
     setthisProduct(data.thisproduct[0]);
@@ -23,7 +23,7 @@ const page = ({ params }: any) => {
   async function getReviews() {
     // console.log("getting reviews");
 
-    const { data } = await axios.post(`/api/products/getreviews`, { pId: pid });
+    const { data } = await axios.post(`api/products/getreviews`, { pId: pid });
 
     console.log("Reviews in pid page", data.ReviewsList);
     setProductReviews(data.ReviewsList);

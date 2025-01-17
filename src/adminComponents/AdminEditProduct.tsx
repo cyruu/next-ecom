@@ -38,7 +38,7 @@ const AdminEditProduct = ({ editProduct }: any) => {
     e.preventDefault();
 
     try {
-      const { data: resData } = await axios.post(`/api/admin/editproduct`, {
+      const { data: resData } = await axios.post(`api/admin/editproduct`, {
         productId: editProduct._id,
         productName: name,
         categoryId: category,
@@ -65,7 +65,7 @@ const AdminEditProduct = ({ editProduct }: any) => {
 
   // function to get all catefoires form db
   async function getCategories(editProduct: any) {
-    const { data: resData } = await axios.get(`/api/products/getcategory`);
+    const { data: resData } = await axios.get(`api/products/getcategory`);
     // console.log(resData);
 
     setCategoryList(resData.categoryList);

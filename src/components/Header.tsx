@@ -67,7 +67,7 @@ const Header = () => {
     setlogoutLoading(true);
 
     // notify("hello", 200);
-    const { data: resData } = await axios.get("/api/users/logout");
+    const { data: resData } = await axios.get("api/users/logout");
     setlogoutLoading(false);
     handleClose();
     handleClosemodal();

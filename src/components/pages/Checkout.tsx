@@ -51,7 +51,7 @@ const Checkout = () => {
   });
   async function getProfileData() {
     setloading(true);
-    const { data: resData } = await axios.post("/api/users/getprofiledata", {
+    const { data: resData } = await axios.post("api/users/getprofiledata", {
       uid,
     });
     if (resData.statusCode == 200) {
@@ -89,7 +89,7 @@ const Checkout = () => {
     const { firstName, lastName, email, phone, address, city } = data;
 
     // checkoutCartList and finalTotal available here
-    const { data: resData }: any = await axios.post(`/api/order`, {
+    const { data: resData }: any = await axios.post(`api/order`, {
       uid,
       firstName,
       lastName,
@@ -134,7 +134,7 @@ const Checkout = () => {
       // crate a form element and submit it to esewa endpoint
       const form = document.createElement("form");
       form.method = "POST";
-      form.action = "https://rc-epay.esewa.com.np/api/epay/main/v2/form";
+      form.action = "https://rc-epay.esewa.com.npapi/epay/main/v2/form";
       // form.target = "_blank"; // Open in a new tab
 
       Object.keys(updatedFormData).forEach((key) => {
@@ -158,7 +158,7 @@ const Checkout = () => {
     // console.log(userid);
 
     const { data: resData }: any = await axios.post(
-      `/api/products/getcartitems`,
+      `api/products/getcartitems`,
       {
         msg: "sending user id",
         userId: userid,
@@ -191,7 +191,7 @@ const Checkout = () => {
     <div className="w-[80%] mt-10 mx-auto flex">
       <form
         onSubmit={handleSubmit(submit)}
-        // action="https://rc-epay.esewa.com.np/api/epay/main/v2/form"
+        // action="https://rc-epay.esewa.com.npapi/epay/main/v2/form"
         // method="POST"
         // target="_blank"
         className="w-[100%] flex"

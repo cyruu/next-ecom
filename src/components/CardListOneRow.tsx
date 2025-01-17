@@ -8,7 +8,7 @@ const CardListOneRow = () => {
   const [loading, setLoading] = useState(true);
   async function getBestProducts() {
     setLoading(true);
-    const { data } = await axios.get(`/api/products/getbestproducts`);
+    const { data } = await axios.get(`api/products/getbestproducts`);
     // console.log(data);
 
     setbestProducts(data.bestProductsList);

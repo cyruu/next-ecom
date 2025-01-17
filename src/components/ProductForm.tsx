@@ -42,7 +42,7 @@ const ProductForm = () => {
     e.preventDefault();
 
     try {
-      const { data: resData } = await axios.post(`/api/products/addproduct`, {
+      const { data: resData } = await axios.post(`api/products/addproduct`, {
         productName: name,
         categoryId: category,
         price,
@@ -59,7 +59,7 @@ const ProductForm = () => {
 
   // function to get all catefoires form db
   async function getCategories() {
-    const { data: resData } = await axios.get(`/api/products/getcategory`);
+    const { data: resData } = await axios.get(`api/products/getcategory`);
     console.log(resData);
     setCategoryList(resData.categoryList);
   }

@@ -15,7 +15,7 @@ const Order = () => {
   console.log(uid);
   async function getOrder() {
     setLoading(true);
-    const { data: resData }: any = await axios.post("/api/getorder", { uid });
+    const { data: resData }: any = await axios.post("api/getorder", { uid });
     // console.log("sas", resData);
     // console.log("hello", resData.OrderList);
     let completePaymentOrderList = resData.OrderList.filter(

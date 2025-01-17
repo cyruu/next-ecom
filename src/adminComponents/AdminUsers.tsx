@@ -8,7 +8,7 @@ const AdminUsers = () => {
   async function getUsers() {
     console.log("function call");
 
-    const { data: resData } = await axios.get(`/api/admin/getusers`);
+    const { data: resData } = await axios.get(`api/admin/getusers`);
     console.log(resData);
     setuserList(resData.userList);
   }

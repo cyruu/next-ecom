@@ -45,7 +45,7 @@ const ProductReviews = ({
     const sentimentResult = "positive";
 
     // API to add review
-    const { data: reviewData } = await axios.post(`/api/products/addreview`, {
+    const { data: reviewData } = await axios.post(`api/products/addreview`, {
       sentimentResult,
       loggedInUser,
       userId: loggedInUser.userId,

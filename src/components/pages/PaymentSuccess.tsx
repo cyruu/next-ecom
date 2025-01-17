@@ -14,14 +14,14 @@ const PaymentSuccess = () => {
   const total: any = query?.get("t");
   // updatePaymentStatus
   async function updatePaymentStatus(orderId: any) {
-    const { data: resData } = await axios.post("/api/updatepaymentstatus", {
+    const { data: resData } = await axios.post("api/updatepaymentstatus", {
       orderId,
     });
     console.log(resData);
   }
   // delete items from cart
   async function deleteCartItems(orderId: any) {
-    const { data: resData } = await axios.post("/api/deletecartitems", {
+    const { data: resData } = await axios.post("api/deletecartitems", {
       orderId,
     });
     console.log(resData);

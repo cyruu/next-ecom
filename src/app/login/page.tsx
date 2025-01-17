@@ -21,11 +21,11 @@ const Login = () => {
   async function submit(data: any) {
     setLoading(true);
     const { username, password } = data;
-    const { data: resData } = await axios.post("/api/users/login", {
+    const { data: resData } = await axios.post("api/users/login", {
       username,
       password,
     });
-    // const { data: resData } = await axios.post("/api/users/login", {
+    // const { data: resData } = await axios.post("api/users/login", {
     //   username: "asur12345",
     //   password: "asur12345",
     // });

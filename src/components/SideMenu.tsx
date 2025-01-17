@@ -52,7 +52,7 @@ const SideMenu = () => {
 
   const handleLogout = async () => {
     setlogoutLoading(true);
-    const { data: resData } = await axios.get("/api/users/logout");
+    const { data: resData } = await axios.get("api/users/logout");
     setlogoutLoading(false);
     handleClose();
     notify(resData.msg, resData.statusCode);
@@ -65,7 +65,7 @@ const SideMenu = () => {
 
   const getCategories = async () => {
     try {
-      const { data: resData } = await axios.get(`/api/products/getcategory`);
+      const { data: resData } = await axios.get(`api/products/getcategory`);
       setCategoryList(resData.categoryList || []); // Ensure an empty array is set if no categories
     } catch (error) {
       console.error("Error fetching categories:", error);

@@ -25,7 +25,7 @@ const Profile = () => {
   // get user data
   async function getUserData() {
     setLoading(true);
-    const { data: resData } = await axios.post("/api/users/getuserdata", {
+    const { data: resData } = await axios.post("api/users/getuserdata", {
       uid,
     });
     setemail(resData.userData[0].email);
@@ -33,7 +33,7 @@ const Profile = () => {
   }
   // get profile details data
   async function getProfileData() {
-    const { data: resData } = await axios.post("/api/users/getprofiledata", {
+    const { data: resData } = await axios.post("api/users/getprofiledata", {
       uid,
     });
     console.log("profile data", resData);
@@ -52,7 +52,7 @@ const Profile = () => {
   // handle save
   async function handleSave() {
     setEditEnabled((prev: any) => !prev);
-    const { data: resData } = await axios.post("/api/users/setprofiledata", {
+    const { data: resData } = await axios.post("api/users/setprofiledata", {
       uid,
       firstName,
       lastName,

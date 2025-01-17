@@ -40,7 +40,7 @@ function ChildModal({ id, setReloadCategories }: any) {
   async function handleDeleteCategory(e: any) {
     console.log("delete function called");
 
-    const { data: resData } = await axios.post(`/api/admin/deletecategory`, {
+    const { data: resData } = await axios.post(`api/admin/deletecategory`, {
       _id,
     });
     notify(resData.msg, resData.statusCode);
@@ -108,7 +108,7 @@ function ChildModal2({ id, categoryName, setReloadCategories }: any) {
 
     console.log("name", editCategoryName);
 
-    const { data: resData } = await axios.post(`/api/admin/editcategory`, {
+    const { data: resData } = await axios.post(`api/admin/editcategory`, {
       editCategoryName,
       _id,
     });
@@ -208,7 +208,7 @@ const page = () => {
   };
   //getcategoriew function
   async function getCategories() {
-    const { data: resData } = await axios.get(`/api/products/getcategory`);
+    const { data: resData } = await axios.get(`api/products/getcategory`);
     console.log(resData);
     setCategoryList(resData.categoryList);
   }
@@ -216,7 +216,7 @@ const page = () => {
   async function handleAddCategory(data: any, e: any) {
     e.preventDefault();
     const { categoryName } = data;
-    const { data: resData } = await axios.post(`/api/products/addcategory`, {
+    const { data: resData } = await axios.post(`api/products/addcategory`, {
       categoryName,
     });
     notify(resData.msg, resData.statusCode);
