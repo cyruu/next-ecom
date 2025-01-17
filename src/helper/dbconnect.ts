@@ -1,12 +1,28 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
+
+let isConnected = false; // Flag to prevent multiple connections
 
 export async function dbconnect() {
+  if (isConnected) {
+    console.log("Already connected to MongoDB");
+    return;
+  }
+
   try {
     await mongoose.connect(process.env.MONGO_URL!);
     const conn = mongoose.connection;
-    conn.on("connected", () => console.log("connected to mongodb"));
-    conn.on("error", () => console.log("failed to connect"));
+
+    // Attach listeners only once
+    conn.once("connected", () => {
+      console.log("Connected to MongoDB");
+    });
+
+    conn.once("error", (error) => {
+      console.log("Failed to connect", error);
+    });
+
+    isConnected = true; // Mark as connected
   } catch (error) {
-    console.log(error);
+    console.log("Connection error:", error);
   }
 }
