@@ -8,13 +8,14 @@ import { Button } from "@mui/material";
 const RelatedProducts = ({ productId }: any) => {
   let bestProductCount = [1, 2, 3, 4, 5];
   const [recommendProductList, setrecommendProductList] = useState([]);
-  const [showCount, setShowCount] = useState(1);
+  // const [showCount, setShowCount] = useState(1);
+  const [showCount, setShowCount] = useState(5);
 
   const [loading, setLoading] = useState(true);
   async function getrecommendProductList() {
     setLoading(true);
     const { data: resData } = await axios.post(
-      `api/products/getcategoryrecommendproducts`,
+      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/products/getcategoryrecommendproducts`,
       { productId }
     );
 
@@ -47,7 +48,7 @@ const RelatedProducts = ({ productId }: any) => {
           <div className="buttons mt-5 w-full flex items-center justify-center">
             {showCount >= recommendProductList.length ? (
               <Button
-                onClick={() => setShowCount(1)}
+                onClick={() => setShowCount(5)}
                 className="w-max text-gray-500"
               >
                 <KeyboardArrowUpOutlinedIcon className="text-md" />
@@ -55,7 +56,7 @@ const RelatedProducts = ({ productId }: any) => {
               </Button>
             ) : (
               <Button
-                onClick={() => setShowCount((prev) => prev + 1)}
+                onClick={() => setShowCount((prev) => prev + 5)}
                 className="w-max text-gray-500"
               >
                 <KeyboardArrowDownOutlinedIcon className="text-md" />

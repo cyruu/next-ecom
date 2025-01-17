@@ -43,7 +43,7 @@ const ProductForm = () => {
 
     try {
       const { data: resData } = await axios.post(
-        `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/products/addproduct`,
+        `${process.env.NEXT_PUBLIC_DOMAIN_NAME}${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/products/addproduct`,
         {
           productName: name,
           categoryId: category,

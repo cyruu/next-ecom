@@ -27,7 +27,7 @@ const ProductDescription = ({ product, loading, productReviews = [] }: any) => {
 
     if (product && loggedInUser) {
       const { data: resData }: any = await axios.post(
-        `api/products/addtocart`,
+        `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/products/addtocart`,
         {
           product,
           userId: loggedInUser.userId,

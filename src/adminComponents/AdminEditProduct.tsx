@@ -39,7 +39,7 @@ const AdminEditProduct = ({ editProduct }: any) => {
 
     try {
       const { data: resData } = await axios.post(
-        `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/admin/editproduct`,
+        `${process.env.NEXT_PUBLIC_DOMAIN_NAME}${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/admin/editproduct`,
         {
           productId: editProduct._id,
           productName: name,

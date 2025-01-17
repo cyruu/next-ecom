@@ -24,7 +24,7 @@ const Cart = () => {
     setLoading(true);
     try {
       const { data: resData }: any = await axios.post(
-        `api/products/getcartitems`,
+        `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/products/getcartitems`,
         {
           msg: "sending user id",
           userId: uid,

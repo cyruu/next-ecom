@@ -72,12 +72,13 @@ const Header = () => {
     handleClose();
     handleClosemodal();
     notify(resData.msg, resData.statusCode);
-    if (resData.statusCode == 200) {
-      setTimeout(() => {
-        router.push("/login");
-        // window.location.href = "/";
-      }, 200);
-    }
+    router.push("/login");
+    // if (resData.statusCode == 200) {
+    //   setTimeout(() => {
+    //     router.push("/login");
+    //     // window.location.href = "/";
+    //   }, 200);
+    // }
   };
   //required here
   function handleBurgerclick() {
