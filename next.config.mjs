@@ -3,9 +3,9 @@ const nextConfig = {};
 
 export default nextConfig;
 
-// module.exports={
-//     experimental:{
-//         serverActions: true,
-//         serverComponentsExternalPackages:['mongoose']
-//     }
-// }
+// // module.exports={
+// //     experimental:{
+// //         serverActions: true,
+// //         serverComponentsExternalPackages:['mongoose']
+// //     }
+// // }

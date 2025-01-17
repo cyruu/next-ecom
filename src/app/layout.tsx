@@ -10,12 +10,15 @@ import { Header, SideMenu } from "@/index";
 import { Provider } from "react-redux";
 import { store } from "@/slices/store";
 import Footer from "@/components/Footer";
+
+import i18n from "../../i18n";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
+    // <I18nextProvider i18n={i18n}>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <html lang="en">
@@ -45,5 +48,6 @@ export default function RootLayout({
         </html>
       </ThemeProvider>
     </Provider>
+    // </I18nextProvider>
   );
 }
