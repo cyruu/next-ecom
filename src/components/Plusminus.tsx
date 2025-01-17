@@ -30,7 +30,7 @@ const Plusminus = ({
   }
   async function apiCallforQuantity() {
     const { data: resData }: any = await axios.post(
-      `api/products/updatequantity`,
+      `${process.env.NEXT_PUBLIC_DOMAIN_NAME}api/products/updatequantity`,
       {
         cartId,
         quantity,
